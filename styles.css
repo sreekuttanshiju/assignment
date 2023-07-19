@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #89f3f7;
+}
+
+.dancing-lady {
+    width: 100px;
+    height: 200px;
+    position: relative;
+    animation: dance 2s ease infinite;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ff99cc, #ff66a3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.head {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff99cc;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.body {
+    width: 50px;
+    height: 80px;
+    background-color: #ff99cc;
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-leg,
+.right-leg {
+    width: 10px;
+    height: 50px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-leg {
+    left: 25px;
+}
+
+.right-leg {
+    right: 25px;
+}
+
+.left-arm,
+.right-arm {
+    width: 10px;
+    height: 50px;
+    background-color: #333;
+    position: absolute;
+    top: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-arm {
+    left: -5px;
+    transform-origin: 50% 0;
+    animation: waveLeft 2s ease infinite;
+}
+
+.right-arm {
+    right: -5px;
+    transform-origin: 50% 0;
+    animation: waveRight 2s ease infinite;
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes waveLeft {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes waveRight {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+}
